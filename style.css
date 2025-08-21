@@ -340,15 +340,15 @@ section {
 
 /* Skills Section */
 .skills {
-    background: linear-gradient(135deg, rgba(150, 162, 213, 0.03) 0%, rgba(58, 12, 163, 0.03) 100%);
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.03) 0%, rgba(255, 42, 0, 0.03) 100%);
     padding: 60px 20px;
 }
 
 .skills .heading {
     text-align: center;
-    font-size: 7rem;
+    font-size: 10rem;
     margin-bottom: 40px;
-    color: var(--text-color, #ff0000); /* Fallback */
+    color: var(--text-color, #c79e9e); /* Fallback */
 
 }
 
@@ -366,7 +366,7 @@ section {
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
-    box-shadow: 0 0 30px rgb(255, 255, 255);
+    box-shadow: 0 0 30px rgb(247, 247, 247);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -378,13 +378,13 @@ section {
     background: var(--card-bg, #fff); /* Fallback */
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(121, 223, 127, 0.5);
+    box-shadow:  10px 30px rgb(255, 255, 255);
     transition: all 0.4s ease;
 }
 
 .skill-category:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 40px rgba(55, 0, 255, 0.2);
 }
 
 .skill-category h3 {
@@ -398,7 +398,7 @@ section {
 
 .skill-item {
     margin-bottom: 40px;
-    color: var(--bg-color, #000);
+    color: var(--bg-color, #0044ff);
 }
 
 .skill-header {
@@ -805,8 +805,6 @@ section {
 
 
 
-/* For extra small phones (max 480px) */
-
 @media (max-width: 480px) {
 
   html {
@@ -857,9 +855,59 @@ section {
 
     font-size: 1.6rem;
 
-    padding: 1.2rem;
+    padding: 1.2rem;
 
-  }
+  }
 
 }
+/* Navbar Responsive (keep icons always visible) */
+@media (max-width: 1285px) {
+  #menu-icon {
+    display: block;
+    cursor: pointer;
+  }
 
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem 3rem;
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    width: 50%;
+
+    /* animation-ready */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: var(--text-color);
+  }
+
+  .navbar.active {
+    max-height: 500px; /* enough height to fit links */
+    opacity: 1;
+  }
+
+  .gradient-btn {
+    display: none;
+  }
+}
+
+canvas#smoke {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* still lets clicks pass through */
+  width: 100%;
+  height: 100%;
+  z-index: 9999; /* very high so it stays above everything */
+}
