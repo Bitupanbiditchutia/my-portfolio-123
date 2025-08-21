@@ -627,3 +627,239 @@ section {
     box-shadow: 0 0 20px var(--main-color);
     transform: translateY(-5px);
 }
+/* ===========================
+
+   Mobile Responsive Fixes
+
+   =========================== */
+
+
+
+/* For tablets (max 1024px) */
+
+@media (max-width: 1024px) {
+
+  html {
+
+    font-size: 55%;
+
+  }
+
+  .home {
+
+    flex-direction: column-reverse;
+
+    gap: 5rem;
+
+    text-align: center;
+
+  }
+
+  .home-content {
+
+    align-items: center;
+
+    text-align: center;
+
+  }
+
+  .home-img img {
+
+    width: 35vw;
+
+  }
+
+  .about {
+
+    flex-direction: column;
+
+    gap: 5rem;
+
+    text-align: center;
+
+  }
+
+  .about-img img {
+
+    width: 35vw;
+
+  }
+
+  .skills-container {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    padding: 30px 10px;
+
+  }
+
+}
+
+
+
+/* For small phones (max 768px) */
+
+@media (max-width: 768px) {
+
+  html {
+
+    font-size: 50%;
+
+  }
+
+  .header {
+
+    padding: 2rem 5%;
+
+  }
+
+  #menu-icon {
+
+    display: block;
+
+    cursor: pointer;
+
+  }
+
+  .navbar {
+
+    position: absolute;
+
+    top: 100%;
+
+    right: 0;
+
+    background: rgba(0,0,0,0.9);
+
+    backdrop-filter: blur(10px);
+
+    flex-direction: column;
+
+    width: 100%;
+
+    display: none;
+
+    text-align: center;
+
+  }
+
+  .navbar.active {
+
+    display: flex;
+
+  }
+
+  .navbar a {
+
+    font-size: 2rem;
+
+    padding: 1.5rem 0;
+
+  }
+
+  .home h1 {
+
+    font-size: 4.5rem;
+
+  }
+
+  .home h3 {
+
+    font-size: 2.8rem;
+
+  }
+
+  .home p {
+
+    font-size: 2rem;
+
+  }
+
+  .home-img img,
+
+  .about-img img {
+
+    width: 60vw;
+
+  }
+
+  .skills-container {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .contact .heading,
+
+  .skills .heading,
+
+  .about-content h2,
+
+  .project .heading {
+
+    font-size: 4rem;
+
+  }
+
+}
+
+
+
+/* For extra small phones (max 480px) */
+
+@media (max-width: 480px) {
+
+  html {
+
+    font-size: 45%;
+
+  }
+
+  .home h1 {
+
+    font-size: 3.5rem;
+
+  }
+
+  .home h3 {
+
+    font-size: 2.2rem;
+
+  }
+
+  .home p {
+
+    font-size: 1.8rem;
+
+  }
+
+  .social-icons a {
+
+    font-size: 2rem;
+
+    padding: 1rem;
+
+    margin: 1rem 0.3rem;
+
+  }
+
+  .btn, .gradient-btn {
+
+    font-size: 1.5rem;
+
+    padding: 0.8rem 2rem;
+
+  }
+
+  .contact form .input-group input,
+
+  .contact form textarea {
+
+    font-size: 1.6rem;
+
+    padding: 1.2rem;
+
+  }
+
+}
+
